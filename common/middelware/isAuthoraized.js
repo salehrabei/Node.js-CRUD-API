@@ -1,4 +1,4 @@
-const jwt =require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 const rbac = require('../rbac/rbac');
 // const rbac = require('../rbac/rbac');
 

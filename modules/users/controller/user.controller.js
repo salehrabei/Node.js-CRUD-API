@@ -68,6 +68,11 @@ const sign_in = async (req, res) => {
   }
 };
 
+const sign_out = (req, res) => {
+  req.logout();
+  res.redirect('/signin');
+};
+
 const getUser = async (req, res) => {
   let { id } = req.params;
   try {
@@ -105,5 +110,6 @@ module.exports = {
   getUser,
   deleteUser,
   updateUser,
-  sign_in
+  sign_in,
+  sign_out
 };

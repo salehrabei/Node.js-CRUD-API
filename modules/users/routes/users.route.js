@@ -1,4 +1,4 @@
-const { getAllUsers, getUser, deleteUser, updateUser, sign_in, signup } = require("../controller/user.controller");
+const { getAllUsers, getUser, deleteUser, updateUser, sign_in, signup, sign_out } = require("../controller/user.controller");
 const validateRequest = require("../../../common/middelware/validateRequest");
 const isAuthoraized = require("../../../common/middelware/isAuthoraized")
 const { addUserSchema, signinSchema } = require("../joi/user.Validation");
@@ -11,5 +11,5 @@ router.post("/signup",validateRequest(addUserSchema), signup);
 router.post("/signin", validateRequest(signinSchema), sign_in);
 router.delete("/deleteUser/:id",deleteUser)
 router.patch("/updateUser/:id",updateUser)
-
+router.get("/signout", sign_out)
 module.exports = router;

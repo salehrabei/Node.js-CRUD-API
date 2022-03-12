@@ -69,7 +69,7 @@ const sign_in = async (req, res) => {
 };
 
 const sign_out = (req, res) => {
-  req.logout();
+  req.sign_out();
   res.redirect('/signin');
 };
 
